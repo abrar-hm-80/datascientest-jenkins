@@ -119,12 +119,6 @@ helm upgrade --install app fastapi --values=values.yml --namespace prod
       }
     }
 
-    stage('Notify') {
-      steps {
-        catchError(catchInterruptions: true, buildResult: 'Build succeeded', message: 'Build succeeded ...')
-      }
-    }
-
   }
   environment {
     DOCKER_ID = 'abrarhm'
