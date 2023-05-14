@@ -121,7 +121,7 @@ helm upgrade --install app fastapi --values=values.yml --namespace prod
 
     stage('Notify') {
       steps {
-        catchError(catchInterruptions: true, buildResult: 'This will run if the job failed', message: '${env.JOB_NAME} - Build # ${env.BUILD_ID}', stageResult: '${env.BUILD_URL}')
+        catchError(catchInterruptions: true, buildResult: 'Build succeeded', message: 'Build succeeded ...')
       }
     }
 
